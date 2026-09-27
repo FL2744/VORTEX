@@ -1,6 +1,16 @@
 # VORTEX: Voice Recognition to Text Extractor
 
-A native macOS app and Python command-line program that turns recorded speech into translated text. Users choose the input language (or automatic detection), choose an output language, and enter their own OpenAI API key.
+Native macOS and Windows desktop apps, plus a Python command-line program that turns recorded speech into translated text. Users choose the input language (or automatic detection), choose an output language, and enter their own OpenAI API key.
+
+## Download the Windows app
+
+Download `VORTEX-Windows-x64.zip` from [GitHub Releases](https://github.com/FL2744/VORTEX/releases/latest). Extract the ZIP and double-click **VORTEX.exe**. Windows 10/11 x64 is supported; Python does not need to be installed.
+
+Choose audio, set the languages, enter your OpenAI API key, and select **Translate**. Use **Export text** to save a UTF-8 text file. The API key is kept in memory. Cancel prevents further processing after the current API request returns (up to the request timeout); already-submitted work may still be billed.
+
+The executable is not publisher-signed. Windows SmartScreen may show an unknown-publisher warning. If you trust this repository and downloaded the release directly, use **More info → Run anyway** if offered; managed computers may require administrator approval. Do not disable Windows security protections globally.
+
+To build on Windows with Python 3.12: install `requirements.txt` and `pyinstaller`, then run `./windows/build.ps1` in PowerShell. The Windows release workflow builds and launch-tests the executable on a Windows runner before publishing it.
 
 ## Download the macOS app
 
