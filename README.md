@@ -2,7 +2,7 @@
 
 Native macOS and Windows desktop apps, plus a Python command-line program that turns recorded speech into translated text. Users choose the input language (or automatic detection), choose an output language, and enter their own OpenAI API key.
 
-Web implementation here: [vortex](https://l1001.vt.domains/vortex.html)
+Web implementation here: [VORTEX](https://l1001.vt.domains/vortex.html)
 
 ## Download the Windows app
 
