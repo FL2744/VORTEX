@@ -2,7 +2,7 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 ARCH="${ARCH:-$(uname -m)}"
-VERSION="${VERSION:-0.1.1}"
+VERSION="${VERSION:-0.1.2}"
 APP="dist/VORTEX.app"
 mkdir -p "$APP/Contents/MacOS" "$APP/Contents/Resources"
 swiftc -parse-as-library -O -target "$ARCH-apple-macosx13.0" macos/VORTEX.swift -o "$APP/Contents/MacOS/VORTEX"
