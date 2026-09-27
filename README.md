@@ -1,6 +1,29 @@
 # VORTEX: Voice Recognition to Text Extractor
 
-A simple Python command-line program that turns recorded speech into translated text. Users choose the input language (or automatic detection), choose an output language, and enter their own OpenAI API key.
+A native macOS app and Python command-line program that turns recorded speech into translated text. Users choose the input language (or automatic detection), choose an output language, and enter their own OpenAI API key.
+
+## Download the macOS app
+
+Download from [GitHub Releases](https://github.com/FL2744/VORTEX/releases/latest):
+
+- **Apple Silicon** (M1 or newer): `VORTEX-macOS-arm64.zip`.
+- **Intel Mac**: `VORTEX-macOS-x86_64.zip`.
+
+Requires macOS 13 Ventura or later. Unzip, move **VORTEX.app** into Applications, and open it. No Python installation is needed. Choose a recording, enter the input language code or leave it blank for automatic detection, choose an output language, enter your OpenAI API key, and click **Translate**. Use **Export text** to save the result.
+
+These initial builds are ad-hoc signed, **not Apple Developer ID signed or notarized**. macOS may block the first launch. After attempting to open the app, use **System Settings → Privacy & Security → Open Anyway** if available and you trust this download. Managed Macs may require administrator approval. Do not disable Gatekeeper globally.
+
+The app keeps the key only in memory, does not log it, and sends requests directly to OpenAI over HTTPS. Quit VORTEX to end the app session. Cancel stops the local request; work already received by OpenAI may still incur charges.
+
+## Build the app from source
+
+With Apple's command-line developer tools installed:
+
+```bash
+bash macos/build.sh
+```
+
+This produces `dist/VORTEX.app` and a ZIP for your Mac's architecture. To cross-compile an Intel build on Apple Silicon, use `ARCH=x86_64 bash macos/build.sh`. The GitHub Actions workflow builds both architectures for tagged releases or a manual workflow run.
 
 ## How it works
 
@@ -63,4 +86,4 @@ The virtual environment, secrets, and generated translations are excluded from G
 
 ## Validation
 
-Python syntax and dependency import were checked. A live API call is not part of the repository setup checks.
+Python syntax and dependency import were checked. Both native macOS architectures are compiled and their ad-hoc signatures verified during packaging. Live transcription and translation require the user’s API key and are not part of these build checks.
