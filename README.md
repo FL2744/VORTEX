@@ -1,4 +1,4 @@
-# VORTEX: VOice Recognition to Text EXtractor
+# VORTEX: Voice Recognition to Text Extractor
 
 A simple Python command-line program that turns recorded speech into translated text. Users choose the input language (or automatic detection), choose an output language, and enter their own OpenAI API key.
 
