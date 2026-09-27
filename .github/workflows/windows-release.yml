@@ -5,7 +5,7 @@ on:
       release_tag:
         description: Existing release to receive Windows downloads
         required: true
-        default: v0.1.0
+        default: v0.1.1
 permissions:
   contents: write
 jobs:

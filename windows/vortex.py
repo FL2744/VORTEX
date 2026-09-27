@@ -13,6 +13,9 @@ class App:
     def __init__(self, root):
         self.root = root
         root.title('VORTEX — Voice Recognition to Text Extractor')
+        icon = Path(getattr(sys, '_MEIPASS', Path(__file__).resolve().parent.parent)) / 'assets' / 'vortex.ico'
+        if sys.platform == 'win32' and icon.is_file():
+            root.iconbitmap(str(icon))
         root.geometry('820x680')
         root.minsize(680, 560)
         self.events = queue.Queue()
