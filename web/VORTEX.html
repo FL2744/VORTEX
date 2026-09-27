@@ -24,7 +24,7 @@
 <button type="button" id="key-help-open" class="key-help" aria-haspopup="dialog" aria-controls="key-help-dialog">Where do I find this?</button>
 <label for="audio-file">Audio recording</label><input id="audio-file" type="file" accept=".mp3,.mp4,.mpeg,.mpga,.m4a,.wav,.webm" hidden>
 <button type="button" id="choose-audio">Choose audio…</button><p id="audio-name" role="status">No audio selected. Maximum file size: 25 MB.</p>
-<label for="input-language">Input language code</label><input id="input-language" placeholder="Auto-detect, or en, ar, es, fr…" maxlength="2" pattern="[A-Za-z]{2}" aria-describedby="language-help"><p id="language-help">Leave blank to detect the spoken language automatically.</p>
+<label for="input-language">Input language code</label><input id="input-language" placeholder="Auto-detect, or en, ar, es, fr…" maxlength="2" pattern="[A-Za-z]{2}" aria-describedby="language-help"><div class="result-actions"><a class="key-help" style="margin:0" href="https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes" target="_blank" rel="noopener noreferrer">What is this?</a></div><p id="language-help">Leave blank to detect the spoken language automatically.</p>
 <label for="output-language">Output language</label><input id="output-language" value="English" placeholder="English, Arabic, Spanish…" required>
 <button id="run">Translate audio</button> <button id="cancel-audio" type="button" hidden>Cancel</button>
 <p>Whisper transcribes your recording; GPT-5.6 Luna translates it. Your audio and transcript are sent to OpenAI when you click Translate audio. OpenAI API charges apply. Your key is kept in this page’s memory and is not saved by this page or sent to JupyterLite.</p></section>
