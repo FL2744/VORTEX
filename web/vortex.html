@@ -33,7 +33,7 @@
 </div></form>
 <p id="status" role="status">Connecting to JupyterLite…</p>
 <button id="reconnect" type="button" hidden>Reconnect to JupyterLite</button>
-<p id="hosted-help" hidden><a href="https://l1001.vt.domains/VORTEX.html">Open the hosted interface</a></p>
+<p id="hosted-help" hidden><a href="https://l1001.vt.domains/vortex.html">Open the hosted interface</a></p>
 <details id="code-details"><summary><strong>Run your own code</strong></summary>
 <form id="code-form"><textarea id="code-input" aria-label="Python or Pyodide code" placeholder="Paste Python or Pyodide code here. The audio picker is for the translation form above; it does not upload files to this workspace." spellcheck="false" required style="margin-top:12px"></textarea>
 <button id="code-run" type="submit" disabled>Run</button> <button id="code-stop" type="button" hidden>Stop / Reset</button></form></details>
@@ -62,7 +62,7 @@ keyHelpDialog.addEventListener('close', () => {
   document.body.classList.remove('key-help-open');
   document.getElementById('api-key').focus();
 });
-const hostedURL = 'https://l1001.vt.domains/VORTEX.html';
+const hostedURL = 'https://l1001.vt.domains/vortex.html';
 const url = new URL('https://fl2744.github.io/jupyterlite/lab/index.html');
 url.searchParams.set('path', 'pyodide/simple-api-call.ipynb');
 const channel = 'notebook-bridge-v1';
