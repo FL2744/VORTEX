@@ -5,7 +5,7 @@ A simple Python command-line program that turns recorded speech into translated 
 ## How it works
 
 1. OpenAI Whisper (`whisper-1`) transcribes the recording.
-2. `gpt-4.1-mini` translates the transcript into the requested language.
+2. `gpt-5.6-luna` translates the transcript into the requested language.
 3. VORTEX prints the result and saves a UTF-8 `.txt` file beside the recording.
 
 Whisper's audio translation endpoint only produces English. VORTEX uses a separate text translation step to offer other output languages.

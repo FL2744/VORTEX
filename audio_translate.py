@@ -39,7 +39,7 @@ def main():
 
         print('Translating...')
         response = client.responses.create(
-            model='gpt-4.1-mini', store=False,
+            model='gpt-5.6-luna', store=False,
             instructions=(
                 f'Translate the supplied transcript into {target}. '
                 'Preserve its meaning and paragraph breaks. '
