@@ -1,6 +1,6 @@
 ![VORTEX logo](vortexx.png)
 
-A very simple application for using OpenAI's Whisper. Could be expanded to allow for chunking of large files. Native macOS and Windows desktop apps, plus a Python command-line program that turns recorded speech into translated text. Users choose the input language (or automatic detection), choose an output language, and enter their own OpenAI API key.
+A simple application for using OpenAI's Whisper. Could be expanded to allow for chunking of large files. Native macOS and Windows desktop apps, plus a Python command-line program that turns recorded speech into translated text. Users choose the input language (or automatic detection), choose an output language, and enter their own OpenAI API key.
 
 Web implementation here: [VORTEX](https://l1001.vt.domains/vortex.html)
 
